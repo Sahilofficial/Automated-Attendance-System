@@ -123,7 +123,7 @@ class MainWindow:
                 id, predict = clf.predict(gray_img[y:y + h, x:x + w])
                 accuracy = int((100 * (1 - predict / 300)))
 
-                conn = mysql.connector.connect(host="localhost", username="root", password="Sahil#12",
+                conn = mysql.connector.connect(host="localhost", username="root", password="Root#12",
                                                database="attendancesystem")
                 c = conn.cursor()
 
