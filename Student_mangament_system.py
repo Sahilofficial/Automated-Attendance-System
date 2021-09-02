@@ -243,7 +243,7 @@ class Students:
                           repr(nVar.get()), repr(rollVar.get()), repr(genVar.get()), repr(dVar.get()),
                           repr(eVar.get()), repr(mobVar.get()), repr(adVar.get()), repr(rdVar.get()))
 
-                conn = mysql.connector.connect(host="localhost", username="root", password="Sahil#12", database="attendancesystem")
+                conn = mysql.connector.connect(host="localhost", username="root", password="Root#12", database="attendancesystem")
                 c = conn.cursor()
 
 
@@ -268,7 +268,7 @@ class Students:
 
 
     def show_data(self): # function to show data in GUI table In right frame
-        conn = mysql.connector.connect(host="localhost", username="root", password="Sahil#12", database="attendancesystem")
+        conn = mysql.connector.connect(host="localhost", username="root", password="Root#12", database="attendancesystem")
         c = conn.cursor()
         c.execute('SELECT * FROM student_details')
         data = c.fetchall()
@@ -310,7 +310,7 @@ class Students:
                 update_msg = messagebox.askyesno("Info", "Do you want to update this student's profile", parent=self.master)
                 
                 if update_msg == True:
-                    conn = mysql.connector.connect(host="localhost", username="root", password="Sahil#12", database="attendancesystem")
+                    conn = mysql.connector.connect(host="localhost", username="root", password="Root#12", database="attendancesystem")
                     c = conn.cursor()
                     params = (self.course_var.get(), self.year_var.get(), self.sub_var.get(),
                                 self.sem_var.get(), self.name_var.get(),self.roll_no_var.get(), self.gender_var.get(),
@@ -340,7 +340,7 @@ class Students:
             try:
                 del_msg = messagebox.askyesno("Info", "Are you sure you want to delete this students record", parent=self.master)
                 if del_msg == True:
-                    conn = mysql.connector.connect(host="localhost", username="root", password="Sahil#12", database="attendancesystem")
+                    conn = mysql.connector.connect(host="localhost", username="root", password="Root#12", database="attendancesystem")
                     c = conn.cursor()
                     sql_del_query = "DELETE FROM `student_details` WHERE University_Id=%s"
                     param = (self.u_Id_var.get(),)
@@ -376,7 +376,7 @@ class Students:
         else:
             try:
 
-                conn = mysql.connector.connect(host="localhost", username="root", password="Sahil#12", database="attendancesystem")
+                conn = mysql.connector.connect(host="localhost", username="root", password="Root#12", database="attendancesystem")
                 c = conn.cursor()
                 c.execute('SELECT * FROM student_details')
                 result = c.fetchall()
